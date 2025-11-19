@@ -9,7 +9,7 @@ export function Hero() {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/manicured-lawn-with-golden-sunlight-and-trees.jpg')`,
+          backgroundImage: `url('/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
