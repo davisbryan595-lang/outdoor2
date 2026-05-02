@@ -1,14 +1,17 @@
 import Image from 'next/image'
 
 export function Gallery() {
-  // Placeholder images for now
   const images = [
-    { src: "/beautiful-landscaped-backyard.jpg", alt: "Backyard Landscape" },
-    { src: "/tree-pruning-service.jpg", alt: "Tree Service" },
-    { src: "/manicured-lawn-mowing.jpg", alt: "Lawn Care" },
-    { src: "/garden-flower-bed.jpg", alt: "Garden Design" },
-    { src: "/patio-installation.jpg", alt: "Hardscaping" },
-    { src: "/stump-grinding-machine.jpg", alt: "Stump Grinding" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F5ec9fbb299474ac4ae6fe32ee6c73175?format=webp&width=800&height=1200", alt: "Landscaped Driveway" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F3856a6ff31fc4571a833ba68980c69ae?format=webp&width=800&height=1200", alt: "Patio Design" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F80058f8eadf74042b2d63e5825224fe5?format=webp&width=800&height=1200", alt: "Hardscaping" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Fa9894b05f5a24e58bc1f1ceeb4af43bd?format=webp&width=800&height=1200", alt: "Driveway Installation" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F458e65cf670c49f8930b69f928cc35be?format=webp&width=800&height=1200", alt: "Landscaping" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F27b857e705224e57898c4ea02f3a818b?format=webp&width=800&height=1200", alt: "Yard Maintenance" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F5d42cce3cef649569e634c75c898adae?format=webp&width=800&height=1200", alt: "Garden Landscaping" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Ff9725d865ac54972b42441e78f220b92?format=webp&width=800&height=1200", alt: "Exterior Design" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F67390afaf7954e75a35e832a57bb2f3b?format=webp&width=800&height=1200", alt: "Outdoor Landscape" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Fe4670aff7e34438c89fa7a8aea91f6e4?format=webp&width=800&height=1200", alt: "Property Enhancement" },
   ]
 
   return (
@@ -26,7 +29,7 @@ export function Gallery() {
           {images.map((img, index) => (
             <div key={index} className="relative group overflow-hidden rounded-lg shadow-md aspect-square md:aspect-auto md:h-64 lg:h-80">
               <Image
-                src={img.src || "/placeholder.svg"}
+                src={img.src}
                 alt={img.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
