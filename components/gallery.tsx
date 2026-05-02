@@ -8,6 +8,10 @@ export function Gallery() {
     { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Fa9894b05f5a24e58bc1f1ceeb4af43bd?format=webp&width=800&height=1200", alt: "Driveway Installation" },
     { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F458e65cf670c49f8930b69f928cc35be?format=webp&width=800&height=1200", alt: "Landscaping" },
     { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F27b857e705224e57898c4ea02f3a818b?format=webp&width=800&height=1200", alt: "Yard Maintenance" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F5d42cce3cef649569e634c75c898adae?format=webp&width=800&height=1200", alt: "Garden Landscaping" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Ff9725d865ac54972b42441e78f220b92?format=webp&width=800&height=1200", alt: "Exterior Design" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F67390afaf7954e75a35e832a57bb2f3b?format=webp&width=800&height=1200", alt: "Outdoor Landscape" },
+    { src: "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Fe4670aff7e34438c89fa7a8aea91f6e4?format=webp&width=800&height=1200", alt: "Property Enhancement" },
   ]
 
   return (
