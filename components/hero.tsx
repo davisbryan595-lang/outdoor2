@@ -1,17 +1,44 @@
+'use client'
+
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 export function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const carouselImages = [
+    "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F5ec9fbb299474ac4ae6fe32ee6c73175?format=webp&width=1200&height=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F3856a6ff31fc4571a833ba68980c69ae?format=webp&width=1200&height=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F80058f8eadf74042b2d63e5825224fe5?format=webp&width=1200&height=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2Fa9894b05f5a24e58bc1f1ceeb4af43bd?format=webp&width=1200&height=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F458e65cf670c49f8930b69f928cc35be?format=webp&width=1200&height=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F0f042e260f4e4898bb3fdcac69332937%2F27b857e705224e57898c4ea02f3a818b?format=webp&width=1200&height=800",
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % carouselImages.length)
+    }, 5000) // Change image every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [carouselImages.length])
+
   return (
     <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg')`,
-        }}
-      >
+      {/* Auto-moving Carousel Background */}
+      <div className="absolute inset-0 z-0">
+        {carouselImages.map((image, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out"
+            style={{
+              backgroundImage: `url('${image}')`,
+              opacity: index === currentImageIndex ? 1 : 0,
+            }}
+          />
+        ))}
         <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
       </div>
 
